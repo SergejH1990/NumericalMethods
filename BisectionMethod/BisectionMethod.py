@@ -2,7 +2,6 @@ import sys
 sys.path.insert(0, '../')
 
 import GeneralNumericalMethods as gnm
-import sympy as sym
 
 class BisectionMethod(gnm.NumericalFunction):
     def __init__(self, function_expression, cutoff_precision, left, right):
