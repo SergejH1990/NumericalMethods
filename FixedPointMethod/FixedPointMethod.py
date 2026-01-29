@@ -18,7 +18,6 @@ class FixedPointMethod(gnm.NumericalFunction):
             error = 0
 
 def main():
-    gnm.hello()
     functionExpression = "x**3 - 1"
     foundRoot = 5
     fixedPoint = FixedPointMethod(functionExpression, 0.001, 0.5) 

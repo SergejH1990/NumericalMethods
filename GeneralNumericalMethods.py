@@ -2,9 +2,6 @@ import numpy as np
 from abc import ABC, abstractmethod
 from sympy import *
 
-def hello():
-    print("first time")
-
 def create_function_from_string(expression):
     def function(x):
         return eval(expression)

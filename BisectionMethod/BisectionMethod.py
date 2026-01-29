@@ -45,7 +45,6 @@ class BisectionMethod(gnm.NumericalFunction):
         return mid
 
 def main():
-    gnm.hello()
     functionExpression = "x**3 - 1 + tan(x)"
     bisection = BisectionMethod(functionExpression, 0.001, -1, 2)
     foundRoot = bisection.calculate_numerical_method()
