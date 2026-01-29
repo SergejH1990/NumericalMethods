@@ -17,15 +17,20 @@ class BisectionMethod(gnm.NumericalFunction):
     
     def calculate_numerical_method(self):
         user_function = gnm.create_function_from_string(self.function_expression)
+
+        # Check if root between starting point exist.
         if user_function(self.left) * user_function(self.right) >= 0:
             print("No root could be detected from the intervall")
             return None
 
+        # initialize variables
         self.number_iterations = 0
         mid = None
         error = 100
         current_function_value = 0
         previous_function_value = 0
+
+        # Try to find root between the two starting points while error is bigger than the desired precision.
         while error > self.cutoff_precision:
             mid = (self.left + self.right) / 2
             self.number_iterations += 1
